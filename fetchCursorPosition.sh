@@ -5,8 +5,8 @@ read -s -d ';' ROW
 read -s -d 'R' COLUMN
 
 if [ $# != 1 ]; then
-  echo "Excepted only one argument"
-  exit -1
+	echo "Excepted only one argument"
+	exit -1
 fi
 
 if [[ $1 == "ROW" ]]; then
@@ -19,4 +19,3 @@ fi
 
 echo "Excepted \$1 to be in {\"ROW\", \"COLUMN\"}"
 exit -1
-

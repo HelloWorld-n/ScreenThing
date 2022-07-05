@@ -5,7 +5,7 @@ class Color {
 		short int red;
 		short int green;
 		short int blue;
-		
+
 		Color(short int red, short int green, short int blue){
 			this->red = red % 256;
 			this->green = green % 256;
