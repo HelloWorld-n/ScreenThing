@@ -15,7 +15,7 @@ int enlimit(int num, int limit){
 	}
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv){
 	int terminalSize[2] = {
 		WEXITSTATUS(std::system("exit `tput lines`")), 
 		WEXITSTATUS(std::system("exit `tput cols`"))
@@ -29,14 +29,13 @@ int main(int argc, char **argv) {
 	const int brightest = 200;
 	int backgroundColor[3] = {};
 	for (int i = 0; i < terminalSize[0] - 2; i++){
-		for(int j = 0; j < terminalSize[1]; j++){
+		for (int j = 0; j < terminalSize[1]; j++){
 			if (i < gradientStart){
 				for(int bg = 0; bg < 3; bg++){
 					backgroundColor[bg] = 0;
 				}
-			}
-			else if (i < gradientEnd){
-				for(int bg = 0; bg < 3; bg++){
+			} else if (i < gradientEnd){
+				for (int bg = 0; bg < 3; bg++){
 					backgroundColor[bg] = (
 						i - gradientStart
 					) * (
